@@ -9,6 +9,11 @@ resource "aws_instance" "web" {
   vpc_security_group_ids =["sg-xxxxxxxxxx"]
 
   tags = {
-    Name = element(var.components, count.index )
+    Name = element(var.components, count.index)
+  }
+  resource "aws_security_group" "allow_tls" {
+    count=length(var.components)
+    name   = element(var.components, count.index )
+
   }
 }
