@@ -2,7 +2,7 @@ variable "fruit" {
   default = "apple"
 }
 output "fruit" {
-  value = "var.fruits"
+  value = var.fruits
 }
 variable "fruit_names" {
   default = ["apple","mango","apple"]
