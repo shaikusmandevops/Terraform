@@ -8,10 +8,10 @@ variable "fruits" {
   default = ["apple","mango"]
 }
 output "fruits_apple" {
-  value = "var.fruits[0]"
+  value = var.fruits[0]
 }
 output "fruits_mango" {
-  value = "var.fruits[1]"
+  value = var.fruits[1]
 }
 variable "fruits_stock" {
   default ={
