@@ -40,3 +40,15 @@ variable "fruits_with_price" {
 output "fruits_with_price" {
   value = var.fruits_with_price["apple"]
 }
+variable "fruit_details_1" {
+  default = {
+    apple={
+      stock=100
+      breed="shimla"
+      sweetness=true
+    }
+  }
+}
+output "fruit_details_1" {
+  value = "fruit_stock=${var.fruit_details_1["apple"].stock}, fruit_breed=${var.fruit_details_1["apple"].breed}, fruit_sweetness="${var.fruit_details_1.sweetness}"
+}
