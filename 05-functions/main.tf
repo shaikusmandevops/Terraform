@@ -18,4 +18,5 @@ output "fruits_with_try_function" {
 }
 output "fruits_with_lookup_function" {
   value = lookup(var.fruits_with_try_function["apple"], "price" , 2)
+  //value=try(var.fruits_with_try_function["apple"].price, 0)
 }
